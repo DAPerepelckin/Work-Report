@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Work Report</string>
+    <string name="title_home">Home</string>
+    <string name="title_work_zone">Work</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_work_button">New work</string>
+</resources>
