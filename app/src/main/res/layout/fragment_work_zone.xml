@@ -19,17 +19,33 @@
         android:textColor="@color/colorIcons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/work_list_recycler_view"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/recycler_item" />
+        app:mcv_calendarMode="week"
+        app:mcv_selectionColor="@color/colorAccent"
+        app:mcv_showOtherDates="all"/>
+
+    <com.dapstd.workreport.ui.work_zone.weekview.WeekView
+        android:id="@+id/weekView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:noOfVisibleDays="7"
+        app:firstDayOfWeek="monday"
+        app:showFirstDayOfWeekFirst="true"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
